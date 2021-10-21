@@ -2,6 +2,10 @@
   background-color: red;
 }
 
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 #heading {
   animation: pulse infinite 1.5s linear;
   font-weight: 600;
@@ -19,4 +23,3 @@
   100% {
     transform: scale(1);
   }
-}
