@@ -1,1 +1,22 @@
-.impostor {background-color: red;}
+.impostor {
+  background-color: red;
+}
+
+#heading {
+  animation: pulse infinite 1.5s linear;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
