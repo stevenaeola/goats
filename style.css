@@ -1,5 +1,15 @@
-.impostor {background-color: red;}
-
+.impostor span:hover {
+    background-color: red;
+}
+span, li {
+    padding: 10px;
+    border-radius: 10px;
+}
+img {
+    border-radius: 50%;
+    margin: 20px;
+}
 *{
     font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
 }
