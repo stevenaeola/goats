@@ -1,1 +1,5 @@
+html {
+    cursor: url("./goat.svg") 16 16, pointer;
+}
+
 .impostor {background-color: red;}
