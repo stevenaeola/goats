@@ -11,8 +11,23 @@
     <title>Goats!</title>
   </head>
   <body>
+    <script>
+      document.addEventListener('click', () => {  // plays one of two goat sounds on click anywhere
+        let x = Math.floor((Math.random() * 100) + 1);  // random number between 1 and 100 inclusive
+        if (x <= 2) { // 2% chance of 'spawning' a screaming goat
+          document.getElementById("goat_scream").play();
+        }
+        else {
+          document.getElementById("goat_normal").play();
+        }
+      });
+    </script>
+    <audio id="goat_normal" src="Goat_idle1.ogg" type="audio/ogg"></audio>
+    <audio id="goat_scream" src="Goat_scream6.ogg" type="audio/ogg"></audio>
+    
     <Center><h1>Goats</h1></Center>
-  <img src="goat.jpg" alt="Goat Picture">
+    <img src="goat.jpg" alt="Goat Picture">
+
 
     <h2>Famous goats from fairy tales</h2>
 
