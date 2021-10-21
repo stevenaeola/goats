@@ -6,9 +6,39 @@
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #heading {
   animation: pulse infinite 1.5s linear;
   font-weight: 600;
+}
+
+img:hover {
+  animation: spinnay infinite 0.2s linear, veryBouncy infinite 1s linear;
+}
+
+@keyframes veryBouncy {
+  0% {
+    translate: 0;
+  }
+
+  20% {
+    translate: -200px -200px
+  }
+
+  40% {
+    translate: 200px 0
+  }
+
+  60% {
+    translate: 0 -200px
+  }
+
+  100% {
+    translate: 0;
+  }
 }
 
 @keyframes pulse {
@@ -23,3 +53,14 @@
   100% {
     transform: scale(1);
   }
+}
+
+@keyframes spinnay {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
