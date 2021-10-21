@@ -1,1 +1,5 @@
-.impostor span:hover {background-color: red;}
+.impostor {background-color: red;}
+
+*{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
