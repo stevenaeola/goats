@@ -1,18 +1,64 @@
+.impostor {
+  background-color: red;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .impostor span:hover {
-    background-color: red;
+  background-color: red;
 }
-span, li {
-    padding: 10px;
-    border-radius: 10px;
+
+span,
+li {
+  padding: 10px;
+  border-radius: 10px;
 }
+
 img {
-    border-radius: 50%;
-    margin: 20px;
+  border-radius: 50%;
+  margin: 20px;
 }
+
 .goats {
-    margin: 20px;
+  margin: 20px;
 }
-*{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
+
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+#heading {
+  animation: pulsey infinite 1.5s linear;
+  font-weight: 600;
+}
+
+img:hover {
+  animation: spinnay infinite 2s linear;
+}
+
+@keyframes pulsey {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinnay {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }
