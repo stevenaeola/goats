@@ -31,37 +31,15 @@ img {
 }
 
 #heading {
-  animation: pulse infinite 1.5s linear;
+  animation: pulsey infinite 1.5s linear;
   font-weight: 600;
 }
 
 img:hover {
-  animation: spinnay infinite 0.2s linear, veryBouncy infinite 1s linear;
+  animation: spinnay infinite 2s linear;
 }
 
-@keyframes veryBouncy {
-  0% {
-    translate: 0;
-  }
-
-  20% {
-    translate: -200px -200px
-  }
-
-  40% {
-    translate: 200px 0
-  }
-
-  60% {
-    translate: 0 -200px
-  }
-
-  100% {
-    translate: 0;
-  }
-}
-
-@keyframes pulse {
+@keyframes pulsey {
   0% {
     transform: scale(1);
   }
