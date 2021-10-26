@@ -1,13 +1,11 @@
-.impostor {
-  background-color: red;
-}
-
 body {
   overflow-x: hidden;
 }
 
 .impostor span:hover {
   background-color: red;
+  color: white;
+  cursor: not-allowed;
 }
 
 span,
