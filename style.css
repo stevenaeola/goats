@@ -5,6 +5,7 @@ body {
 .impostor span:hover {
   background-color: red;
   color: white;
+  cursor: not-allowed;
 }
 
 span,
