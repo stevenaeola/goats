@@ -1,9 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -11,22 +7,96 @@
     <title>Goats!</title>
   </head>
   <body>
-    <h1>Goats</h1>
+    <script>
+      document.addEventListener('click', () => {  // plays one of two goat sounds on click anywhere
+        let x = Math.floor((Math.random() * 100) + 1);  // random number between 1 and 100 inclusive
+        if (x <= 2) { // 2% chance of 'spawning' a screaming goat
+          document.getElementById("goat_scream").play();
+        }
+        else {
+          document.getElementById("goat_normal").play();
+        }
+      });
+    </script>
+    <audio id="goat_normal" src="Goat_idle1.ogg" type="audio/ogg"></audio>
+    <audio id="goat_scream" src="Goat_scream6.ogg" type="audio/ogg"></audio>
+    
+    <h1 id='heading'>Goats</h1>
     <img src="goat.jpg" alt="Goat Picture">
 
     <h2>Famous goats from fairy tales</h2>
 
-    <ul>
-    <li>Big billy goat Gruff</li>
+    <div class="goats">
+      <p class='crewmate'><span>Big billy goat Gruff</span></p>
+      <p class='crewmate'><span>Little billy goat Gruff</span></p>
+      <p class='impostor'><span>Larry the lamb</span></p>
+    </div>
+    
+    <script>
+      let crew = document.getElementsByClassName('crewmate');
+      for (item of crew) {
+          item.addEventListener('click', event => {
+            alert('Sorry, they wern\'t the imposter');
+        })
+      }
+  </script>
+  <audio id="goat_normal" src="Goat_idle1.ogg" type="audio/ogg"></audio>
+  <audio id="goat_scream" src="Goat_scream6.ogg" type="audio/ogg"></audio>
 
-    <li>Little billy goat Gruff</li>
-    <li class='impostor'>Larry the lamb</li>
-
-
+    <h2>Goat Simulator</h2>
     </ul>
-
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            How to unlock Space Goat
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            A Space Goat can be found in Goat City Bay, on top of a crashed UFO. Bringing him a towel is a requirement for unlocking Hitchhiker Goat.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          How to unlock Devil Goat
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          To unlock the Devil Goat, you want to first go up the spiral tower near the spawn. Once inside, go to the
+          front and sit in the throne until you are spawned back in the world. Now, you'll want to go to the pentagram
+          in the corner of the map. While there, use the "R" key to spawn 5+ goats into the pentagram.
+          <br>
+          At this point, a small ritual will commence, and you will unlock the devil goat.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          How to unlock Deadgoa7 Goat
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          On the rooftops of one of the apartments in Goat City Bay (There are pride flags surrounding it), there’s a
+          party going on featuring none other than Deadmau5 (Pronounced ‘Deadmouse’, not ‘Dead-mau-five’). There are
+          many ways to enter the party. You could use the Jetpack Goat to fly up there. You could use the whale, or,
+          just go up by the elevator.
+          <br>
+          Walking up to the DJ will grant you the Deadgoa7 goat. You can also stay and enjoy the party, if you wish.
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     <script>
       impostors = document.getElementsByClassName("impostor");
       console.log(impostors);
@@ -46,5 +116,6 @@
       }
       
     </script>
+    <script src='./script.js'></script>
   </body>
 </html>
