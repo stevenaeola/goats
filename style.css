@@ -1,3 +1,12 @@
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+html {
+  cursor: url("./goat.svg") 16 16, pointer;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -21,11 +30,6 @@ img {
 
 .goats {
   margin: 20px;
-}
-
-* {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  text-align: center;
 }
 
 #heading {
