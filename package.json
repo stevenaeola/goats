@@ -1,0 +1,23 @@
+{
+  "name": "goats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenaeola/goats.git"
+  },
+  "author": "s.p.bradley@durham.ac.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenaeola/goats/issues"
+  },
+  "homepage": "https://github.com/stevenaeola/goats#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
