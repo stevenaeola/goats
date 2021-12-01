@@ -16,7 +16,14 @@ const goats = [
     ]
 
 app.get('/goat/question', function (req,resp){
-  resp.send(req.query.goat_question);
+  let q = req.query.goat_question;
+  let answers = [];
+  for(let goat of goats){
+    if(goat.name.includes(q) || goat.fact.includes(q)){
+      answers.push(goat);
+    }
+  }
+  resp.json(answers); // resp.send would also send as JSON
 })
 
 

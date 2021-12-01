@@ -25,10 +25,14 @@
     
 
 
-    <form action='goat/question'>
-      <input name='goat_question'></input>
+    <form id='goat_question_form' action='goat/question'>
+      <label for='goat_question'>Search for goats</label><input id='goat_question' name='goat_question'></input>
       <input type='submit'></input>
     </form>
+
+    <div id='question_content'>
+      <ul id='question_content_list'></ul>
+    </div>
     
  
     <h1 id='heading'>Goats</h1>
