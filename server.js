@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+
+app.use(express.static('client'));
+
+
 const goats = [
     { "name": "Phil",
     "fact": "Stars in Hercules"},
@@ -10,6 +14,11 @@ const goats = [
     {"name": "Jocelyn Bell Burnell",
     "fact": "Discovered pulsars"}
     ]
+
+app.get('/goat/question', function (req,resp){
+  resp.send(req.query.goat_question);
+})
+
 
 app.get('/random/', function(req, resp){
   let rand = Math.floor(Math.random() * goats.length)
