@@ -39,7 +39,7 @@ app.get('/random/', function (req, resp) {
   const goat = goats[rand];
   const name = goat.name;
   const fact = goat.fact;
-  resp.send(name + ' ' + fact);
+  resp.json(name + ' ' + fact);
 });
 
 app.post('/goat/add', function (req, resp) {

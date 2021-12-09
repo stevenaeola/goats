@@ -4,47 +4,23 @@
 const request = require('supertest');
 const app = require('./app');
 
-describe('Test the random goats service', () => {
+describe('Test the goats service', () => {
     test('GET /random/ succeeds', () => {
         return request(app)
 	    .get('/random/')
 	    .expect(200);
     });
 
-    test('GET /thing/list returns JSON', () => {
+    test('GET /random/  returns JSON', () => {
         return request(app)
-	    .get('/thing/list')
+	    .get('/random/')
 	    .expect('Content-type', /json/);
     });
 
-    test('GET /thing/list includes red hair', () => {
+    test('POST /goat/add succeeds', () => {
+        const params = { name: 'Larry', fact: 'Larry is an impostor' };
         return request(app)
-	    .get('/thing/list')
-	    .expect(/red hair/);
-    });
-
-    test('GET /thing/1 succeeds', () => {
-        return request(app)
-	    .get('/thing/1')
-	    .expect(200);
-    });
-
-    test('GET /thing/1 returns JSON', () => {
-        return request(app)
-	    .get('/thing/1')
-	    .expect('Content-type', /json/);
-    });
-
-    test('GET /thing/1 includes 40', () => {
-        return request(app)
-	    .get('/thing/1')
-	    .expect(/40/);
-    });
-
-    test('POST /thing/add succeeds', () => {
-        const params = {'newthing': 'TechUp'};
-        return request(app)
-        .post('/thing/add')
+        .post('/goat/add')
         .send(params)
 	    .expect(200);
     });

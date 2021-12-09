@@ -5,7 +5,7 @@
   "main": "hello.js",
   "scripts": {
     "test": "jest",
-    "pretest": "eslint *.js",
+    "pretest": "eslint app.js",
     "start": "nodemon server.js"
   },
   "repository": {
